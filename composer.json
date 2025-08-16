@@ -1,0 +1,22 @@
+{
+    "name": "reloader/reloader",
+    "description": "Reloader",
+    "type": "library",
+    "license": "BSD-3-Clause",
+    "autoload": {
+        "files": {
+            "./src/Watcher.php"
+        },
+        "psr-4": {
+            "Reloader\\Reloader\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Sushil Kumar",
+            "email": "sushilkumbhar77@gmail.com"
+        }
+    ],
+    "minimum-stability": "stable",
+    "require": {}
+}
