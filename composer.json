@@ -4,11 +4,11 @@
     "type": "library",
     "license": "BSD-3-Clause",
     "autoload": {
-        "files": {
-            "./src/Watcher.php"
-        },
+        "files": [
+            "src/Watcher.php"
+        ],
         "psr-4": {
-            "Reloader\\Reloader\\": "src/"
+            "Reloader\\": "src/"
         }
     },
     "authors": [
@@ -18,5 +18,7 @@
         }
     ],
     "minimum-stability": "stable",
-    "require": {}
+    "require": {
+        "php": "^8.3"
+    }
 }
