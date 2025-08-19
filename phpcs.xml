@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<ruleset name="Project Standard">
+    <description>Custom PHPCS rules for our project</description>
+
+    <!-- Scan these folders -->
+    <file>src</file>
+    <file>tests</file>
+    <exclude-pattern>vendor/*</exclude-pattern>
+    <exclude-pattern>storage/*</exclude-pattern>
+
+    <!-- Base standard -->
+    <rule ref="PSR12" />
+
+    <!-- Customizations -->
+    <rule ref="Generic.Files.LineLength">
+        <properties>
+            <property name="lineLimit" value="120"/>
+            <property name="absoluteLineLimit" value="140"/>
+        </properties>
+    </rule>
+
+    <!-- Exclude some checks -->
+    <exclude name="Generic.Commenting.Todo" />
+    <exclude name="Squiz.WhiteSpace.SuperfluousWhitespace" />
+
+    <!-- Custom Sniffs (if any) -->
+    <config name="ignore_warnings_on_exit" value="1"/>
+</ruleset>
