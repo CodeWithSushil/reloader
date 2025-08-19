@@ -41,13 +41,14 @@
         "squizlabs/php_codesniffer": "^3.13"
     },
     "scripts":{
-        "types": "phpstan analyse src tests",
-        "lint": "phpcs --standard=PSR12 src tests",
-        "fix": "php-cs-fixer fix src tests",
+        "types": "phpstan analyse --ansi",
+        "lint": "phpcs src --colors && phpcbf src --colors",
+        "fix": "php-cs-fixer fix --ansi --diff",
         "unit": "phpunit",
         "tests": [
             "@types",
             "@lint",
+            "@fix",
             "@unit"
         ]
     },

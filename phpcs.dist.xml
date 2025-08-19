@@ -1,0 +1,37 @@
+<?xml version="1.0"?>
+<ruleset name="Project Standards">
+    <description>PHPCS configuration for the project</description>
+
+    <!-- Show progress and colors in output -->
+    <arg value="ps"/>
+    <arg name="extensions" value="php"/>
+    <arg name="tab-width" value="4"/>
+
+    <!-- Paths to scan -->
+    <file>src</file>
+    <file>tests</file>
+
+    <!-- Exclude specific directories/files -->
+    <exclude-pattern>vendor/*</exclude-pattern>
+    <exclude-pattern>storage/*</exclude-pattern>
+    <exclude-pattern>bootstrap/*</exclude-pattern>
+
+    <!-- Base standard -->
+    <rule ref="PSR12"/>
+
+    <!-- Example: Override or exclude specific rules -->
+    <!-- Disable line length check -->
+    <rule ref="Generic.Files.LineLength">
+        <exclude name="Generic.Files.LineLength.TooLong"/>
+    </rule>
+
+    <!-- Enforce strict types declaration -->
+    <rule ref="SlevomatCodingStandard.TypeHints.DeclareStrictTypes"/>
+
+    <!-- Enforce spacing around operators -->
+    <rule ref="Squiz.WhiteSpace.OperatorSpacing"/>
+
+    <!-- Custom severity -->
+    <config name="severity" value="5"/>
+    <config name="ignore_warnings_on_exit" value="1"/>
+</ruleset>

@@ -18,5 +18,6 @@ return (new Config())
         'single_quote' => true,
         'ordered_imports' => ['sort_algorithm' => 'alpha']
     ])
+    ->setRiskyAllowed(true)
     ->setFinder($finder)
     ->setUsingCache(true);
