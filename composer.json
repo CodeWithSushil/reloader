@@ -2,7 +2,7 @@
     "name": "reloader/reloader",
     "description": "Reloader",
     "type": "library",
-    "license": "BSD-3-Clause",
+    "license": ["BSD-3-Clause", "MIT"],
     "autoload": {
         "files": [
             "src/Watcher.php"
