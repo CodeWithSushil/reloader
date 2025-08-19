@@ -11,6 +11,11 @@
             "Reloader\\": "src/"
         }
     },
+    "autoload-dev": {
+        "psr-4": {
+            "Reloader\\Tests": "tests/"
+        }
+    },
     "authors": [
         {
             "name": "Sushil Kumar",
