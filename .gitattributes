@@ -1,0 +1,59 @@
+# Normalize line endings
+* text=auto eol=lf
+
+# PHP source code
+*.php text eol=lf
+
+# Documentation
+*.md text eol=lf
+*.txt text eol=lf
+
+# Exclude dev & config files from Composer/archives
+/.github        export-ignore
+/.gitlab        export-ignore
+/.idea          export-ignore
+/tests          export-ignore
+/node_modules   export-ignore
+/vendor         export-ignore
+
+# Exclude tooling configs
+/.editorconfig      export-ignore
+/.gitattributes     export-ignore
+/.gitignore         export-ignore
+/.php-cs-fixer.php  export-ignore
+/phpcs.xml.dist     export-ignore
+/phpstan.neon.dist  export-ignore
+/phpunit.xml.dist   export-ignore
+
+# Exclude CI/CD and build files
+/.dockerignore  export-ignore
+/.styleci.yml   export-ignore
+/.scrutinizer.yml export-ignore
+/.travis.yml    export-ignore
+/appveyor.yml   export-ignore
+/Dockerfile     export-ignore
+Makefile        export-ignore
+
+# Exclude lock and package manager files
+/composer.lock      export-ignore
+/package-lock.json  export-ignore
+/yarn.lock          export-ignore
+/pnpm-lock.yaml     export-ignore
+
+# Keep only essential files in distribution
+# (Composer will still include LICENSE and README by default)
+LICENSE  text eol=lf
+README.md text eol=lf
+
+# Improve diffs for readability
+*.md   diff=markdown
+*.json diff=json
+*.yml  diff=yaml
+*.yaml diff=yaml
+*.xml  diff=xml
+
+# Prevent merge conflicts on lock files
+composer.lock merge=ours
+package-lock.json merge=ours
+yarn.lock merge=ours
+pnpm-lock.yaml merge=ours

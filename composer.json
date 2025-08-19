@@ -2,27 +2,29 @@
     "name": "reloader/reloader",
     "description": "Reloader",
     "type": "library",
-    "license": ["BSD-3-Clause", "MIT"],
+    "license": ["MIT", "BSD-3-Clause"],
     "autoload": {
-        "files": [
-            "src/Watcher.php"
-        ],
         "psr-4": {
             "Reloader\\": "src/"
-        }
+        },
+        "files": [
+            "src/Watcher.php"
+        ]
     },
     "autoload-dev": {
         "psr-4": {
-            "Reloader\\Tests": "tests/"
+            "Reloader\\Tests\\": "tests/"
         }
     },
+    "bin": [
+        "bin/watcher"
+    ],
     "authors": [
         {
             "name": "Sushil Kumar",
             "email": "sushilkumbhar77@gmail.com"
         }
     ],
-    "minimum-stability": "stable",
     "require": {
         "php": "^8.3",
         "symfony/console": "^7.3",
@@ -38,5 +40,17 @@
         "friendsofphp/php-cs-fixer": "^3.86",
         "squizlabs/php_codesniffer": "^3.13"
     },
+    "scripts":{
+        "types": "phpstan analyse src tests",
+        "lint": "phpcs --standard=PSR12 src tests",
+        "fix": "php-cs-fixer fix src tests",
+        "unit": "phpunit",
+        "tests": [
+            "@types",
+            "@lint",
+            "@unit"
+        ]
+    },
+    "minimum-stability": "dev",
     "prefer-stable": true
 }
