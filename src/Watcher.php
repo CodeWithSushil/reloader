@@ -13,6 +13,8 @@ declare(strict_types=1);
  * @link     https://github.com/your-username/reloader
  */
 
+namespace Reloader;
+
 /**
  * Class Watcher
  *

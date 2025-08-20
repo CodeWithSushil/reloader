@@ -24,6 +24,9 @@
 /phpcs.xml.dist     export-ignore
 /phpstan.neon.dist  export-ignore
 /phpunit.xml.dist   export-ignore
+/phpunit.xml        export-ignore
+/phpcs.dist.xml     export-ignore
+
 
 # Exclude CI/CD and build files
 /.dockerignore  export-ignore

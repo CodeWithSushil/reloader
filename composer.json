@@ -2,7 +2,7 @@
     "name": "reloader/reloader",
     "description": "Reloader",
     "type": "library",
-    "license": ["MIT", "BSD-3-Clause"],
+    "license": "MIT",
     "autoload": {
         "psr-4": {
             "Reloader\\": "src/"
