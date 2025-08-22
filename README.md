@@ -1,5 +1,4 @@
-# reloader
-
+![Reloader](./art/logo.png)
 [![Tests](https://github.com/CodeWithSushil/reloader/actions/workflows/tests.yml/badge.svg)](https://github.com/CodeWithSushil/reloader/actions/workflows/tests.yml)
 ![Packagist Version](https://img.shields.io/packagist/v/reloader/reloader?style=flat&logo=composer&logoColor=%23fff)
 ![Packagist Dependency Version](https://img.shields.io/packagist/dependency-v/reloader/reloader/php?style=flat&logo=php&logoColor=blue&label=PHP&color=blue)
