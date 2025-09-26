@@ -22,5 +22,7 @@ composer require --dev reloader/reloader
 
 ---
 
+```html
 <script src="https://gist.github.com/CodeWithSushil/7459a4de3a822a40f25a312be60bfcf5.js"></script>
-https://gist.github.com/CodeWithSushil/7459a4de3a822a40f25a312be60bfcf5.js
+<script src="https://gist.github.com/CodeWithSushil/7459a4de3a822a40f25a312be60bfcf5.js"></script>
+```
